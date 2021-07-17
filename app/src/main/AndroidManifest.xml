@@ -16,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnalogClockLiveWallpaperDemo">
+        <activity android:name=".MoreAppActivity"></activity>
         <activity android:name=".ClockListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

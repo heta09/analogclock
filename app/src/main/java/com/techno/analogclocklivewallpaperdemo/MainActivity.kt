@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
             )
             startActivity(intent)
         }
+        indicator.setViewPager(viewPager)
 
         viewPager.addOnPageChangeListener(this)
         ivLeft.setOnClickListener {
@@ -45,6 +46,9 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
             viewPager.setCurrentItem(currentItem + 1, true)
         }
 
+        tvMoreApps.setOnClickListener {
+            startActivity(Intent(this, MoreAppActivity::class.java))
+        }
     }
 
     companion object {
