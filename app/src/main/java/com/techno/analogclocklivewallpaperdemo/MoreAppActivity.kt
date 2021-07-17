@@ -24,7 +24,6 @@ class MoreAppActivity : AppCompatActivity() {
             ivPreview.setImageResource(item)
             MainActivity.selectedPosition = position
         }
-
         btnApply.setOnClickListener {
             val intent = Intent(
                 WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER
