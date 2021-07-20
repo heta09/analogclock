@@ -68,4 +68,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/indicator" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDisableWallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="4dp"
+        android:text="Disable Wallpaper"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicator" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

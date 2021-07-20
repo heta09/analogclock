@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_margin">16dp</dimen>
+    <dimen name="_margin_double">32dp</dimen>
+    <dimen name="_margin_double_mid">24dp</dimen>
+    <dimen name="_margin_half">8dp</dimen>
+    <dimen name="_margin_half_half">4dp</dimen>
+
+    <dimen name="_padding">16dp</dimen>
+    <dimen name="_padding_half">8dp</dimen>
+    <dimen name="_padding_double_mid">24dp</dimen>
+    <dimen name="_padding_double">32dp</dimen>
+    <dimen name="_padding_half_half">4dp</dimen>
+
+    <dimen name="radius">10dp</dimen>
+    <dimen name="radius_mid">15dp</dimen>
+
+    <dimen name="_elevation">15dp</dimen>
+    <dimen name="_elevation_half">7dp</dimen>
+
+    <dimen name="_button_height">50dp</dimen>
+
+    <dimen name="view_margin">13dp</dimen>
+</resources>

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.techno.analogclocklivewallpaperdemo.adapter.DialerPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
 
 
 class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
@@ -47,7 +48,19 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
         }
 
         tvMoreApps.setOnClickListener {
-            startActivity(Intent(this, MoreAppActivity::class.java))
+            startActivity(Intent(this, ClockListActivity::class.java))
+        }
+
+        tvDisableWallpaper.setOnClickListener{
+            val myWallpaperManager = WallpaperManager.getInstance(
+                applicationContext
+            )
+            try {
+                myWallpaperManager.clear()
+            } catch (e: IOException) {
+                // TODO Auto-generated catch block
+                e.printStackTrace()
+            }
         }
     }
 
