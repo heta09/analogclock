@@ -75,7 +75,6 @@ class ClockWallpaperService : WallpaperService() {
                 handler.postDelayed(drawRunner, 200)
             }
         }
-
         private fun draw(canvas: Canvas) {
             canvas.drawColor(bgColor)
             clock.config(
