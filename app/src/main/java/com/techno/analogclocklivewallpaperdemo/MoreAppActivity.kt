@@ -35,7 +35,8 @@ class MoreAppActivity : AppCompatActivity() {
             add(R.drawable.dialer_two)
         }
         adapter.addData(alData)
-        ivPreview.setImageResource(R.drawable.dialer_one)
+        ivPreview.setImageResource(alData[0])
+        MainActivity.selectedPosition = 0
         adapter.onItemClick = { item, position ->
             ivPreview.setImageResource(item)
             MainActivity.selectedPosition = position
