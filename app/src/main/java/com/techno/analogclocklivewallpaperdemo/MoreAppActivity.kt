@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_more_app.*
 
 class MoreAppActivity : AppCompatActivity() {
     private val adapter: MoreAdapter by lazy { MoreAdapter() }
+    val alData = ArrayList<Int>()
     var categoryName: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +31,7 @@ class MoreAppActivity : AppCompatActivity() {
         }
 
         rvList.adapter = adapter
-        val alData = ArrayList<Int>().apply {
+        alData.apply {
             add(R.drawable.dialer_one)
             add(R.drawable.dialer_two)
         }
@@ -49,6 +50,12 @@ class MoreAppActivity : AppCompatActivity() {
                 WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT,
                 ComponentName(this, ClockWallpaperService::class.java)
             )
+            startActivity(intent)
+        }
+
+        btnWallpaper.setOnClickListener(){
+            val intent = Intent(this@MoreAppActivity, WallpaperActivity::class.java)
+            intent.putExtra("clockDial", alData)
             startActivity(intent)
         }
     }

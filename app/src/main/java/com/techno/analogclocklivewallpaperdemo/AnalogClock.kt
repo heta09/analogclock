@@ -72,18 +72,32 @@ class AnalogClock(context: Context?) : View(context) {
             )
             canvas.save()
             paint!!.color = colors[1]
-            canvas.drawLine(
+           /* canvas.drawLine(
                 x, y,
                 (x + radius * 0.6f * Math.cos(Math.toRadians((min / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
                 (y + radius * 0.6f * Math.sin(Math.toRadians((min / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
+                paint!!
+            )*/
+            val temp =Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
+                resources, R.drawable.temp2
+            ), 150, 150, false)
+            canvas.drawBitmap(temp, (x + radius * 0.7f * Math.cos(Math.toRadians((min / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
+                (y + radius * 0.7f * Math.sin(Math.toRadians((min / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
                 paint!!
             )
             canvas.save()
             if (displayHandSec) {
                 paint!!.color = colors[2]
-                canvas.drawLine(
-                    x, y,
-                    (x + radius * 0.7f * Math.cos(Math.toRadians((sec / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
+//                canvas.drawLine(
+//                    x, y,
+//                    (x + radius * 0.7f * Math.cos(Math.toRadians((sec / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
+//                    (y + radius * 0.7f * Math.sin(Math.toRadians((sec / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
+//                    paint!!
+//                )
+                val temp =Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
+                    resources, R.drawable.temp
+                ), 150, 150, false)
+                canvas.drawBitmap(temp, (x + radius * 0.7f * Math.cos(Math.toRadians((sec / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
                     (y + radius * 0.7f * Math.sin(Math.toRadians((sec / 60.0f * 360.0f - 90f).toDouble()))).toFloat(),
                     paint!!
                 )
